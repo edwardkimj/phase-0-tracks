@@ -1,3 +1,5 @@
+# Elevator Pseudocode
+
 # Wait until elevator is at a complete stop at floor 0(lobby)
 # Choose a desired floor(number) to go to
 # Every time a floor is passed until the length of the number of
@@ -10,3 +12,14 @@
   # - press floor 0 and go all the way down.
 # Otherwise:
  # - Stay in the elevator until desired floor is reached.
+
+
+# Folding a blanket
+
+# Grab one side of the blanket
+# Drag the one side until the blanket is flat on the floor
+# Once the blanket is flat:
+  # - Fold the side over to the other end
+# Grab another end:
+  # - Fold the side over to the other end
+# End
