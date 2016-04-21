@@ -15,3 +15,7 @@ p test_array
 p test_array.include?("name")
 
 another_array = ["ed", 5, false, "ken", 2]
+
+new_array = test_array + another_array
+
+p new_array
