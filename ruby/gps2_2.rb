@@ -69,3 +69,18 @@ remove_item("Lemonade", grocery)
 update_quantity("Ice Cream", 1, grocery)
 
 print_list(grocery)
+
+# Comment reflection Section
+=begin
+
+1. Pseudocode is all about orgainzation and logical thinking. It helped us
+ get to the answer in an organized fashion.
+2. Using hashes in this challenge allowed us to add both a key and value
+to our list, rather than adding one single element in an array.
+3. A method returns the result based on the type of code your looking for.
+4. You can pass in strings, integers, open methods, floats, any objects.
+5. By calling each others methods
+6. The concepts of hashes were solidified, but still have some questions
+regarding loops.
+
+=end
