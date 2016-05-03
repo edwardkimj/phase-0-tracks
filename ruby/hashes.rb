@@ -12,53 +12,55 @@
 # }
 
 # First create a hash on information on the client
- client = {
-   name: "John Smith",
-   age: 26,
-   address: "1234 Broadway Ave, Los Angeles, CA",
-   email: "johnsmith@interiordesign.com",
-   phone: nil,
-   number_children: 4,
-   decor_theme: "beach",
-   likes_blue: true,
-   likes_red: false,
-   likes_bricks: false,
- }
 
 # Prompt the client for all the information
 puts "What is your name?"
-p client[:name]
+name = gets.chomp
 
 puts "What is your age?"
-p client[:age]
+age = gets.chomp
 
 puts "What is your street address?"
-p client[:address]
+address = gets.chomp
 
 puts "What is your email address?"
-p client[:email]
+email = gets.chomp
 
 puts "What is your phone number?"
-p client[:phone]
+phone = gets.chomp
 
 puts "How many children do you have?"
-p client[:number_children]
+number_children = gets.chomp
 
 puts "What kind of theme do you want?"
-p client[:decor_theme]
+decor_theme = gets.chomp
 
 puts "Do you like the color blue?"
-p client[:likes_blue]
+likes_blue = gets.chomp
 
 puts "Do you like the color red?"
-p client[:likes_red]
+likes_red = gets.chomp
 
 puts "Would you like bricks as your wall?"
-p client[:likes_bricks]
+likes_bricks = gets.chomp
 
 # print back out the hash to the screen
-puts client
+client = {
+  :name => "#{name}",
+  age: "#{age}",
+  address: "#{address}",
+  email: "#{email}",
+  phone: "#{phone}",
+  number_children: "#{number_children}",
+  decor_theme: "#{decor_theme}",
+  likes_blue: "#{likes_blue}",
+  likes_red: "#{likes_red}",
+  likes_bricks: "#{likes_bricks}",
+}
 
+p client
+
+#
 #Ask the user if everything is correct
 puts "What do you want to change for your information?"
 answer = gets.chomp
@@ -66,10 +68,13 @@ answer = gets.chomp
 if answer == "none"
   puts "Okay great. We'll submit your information."
 else
-  answer == "decor_theme"
-  puts "What would you like it to be?"
-  p client[:decor_theme] = "Italian"
+  answer == "#{answer}"
+  puts "What would you like it to change to?"
+  new_answer = gets.chomp
+  client[:"#{answer}"] = "#{new_answer}"
 end
 
-# print the latest hash
-puts client
+# # print the latest hash
+client.each do |key, value|
+  puts "#{key}: #{value}"
+end
