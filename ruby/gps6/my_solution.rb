@@ -86,7 +86,6 @@ end
 # iterate through each state in the state_data and run the viruspredictor for each state
 # print string of results for each state
 STATE_DATA.each do |state,pop_data|
- 
 # Testing the parts of our each loop
 # p state
 # p STATE_DATA[state][:population_density]
