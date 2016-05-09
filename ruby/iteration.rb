@@ -28,7 +28,7 @@ p nba_players
 
 array_num = [1, 2, 3, 4, 5]
 
-Arrays
+# Arrays
 
 array_num.delete_if do |num|
   num < 5
@@ -52,7 +52,7 @@ p array2
 
 hash_num = { one: 1, two: 2, three: 3, four: 4, five: 5}
 
-Hashes
+# Hashes
 
 hash_num.delete_if do |word, num|
   num < 3
