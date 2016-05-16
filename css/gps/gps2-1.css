@@ -1,0 +1,30 @@
+header {
+  border: 1px solid black;
+  margin: 20px;
+  padding: 20px;
+  background-color: blue;
+  font-family: Georgia;
+}
+
+img {
+  width: 30%;
+  height: 30%;
+  border-radius: 50%;
+}
+
+section {
+  display: inline-block; 
+  vertical-align: top;
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid black;
+  width: 40%;
+  font-family: Helvetica;
+}
+
+footer {
+  border: 1px dotted black; 
+  margin: 20px;
+  padding: 20px; 
+  background-color: red;
+}
