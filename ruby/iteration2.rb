@@ -19,3 +19,52 @@ animals.map! do |animal|
   "I love " + animal + "!!"
 end
 p animals
+
+# Release 2
+# Arrays
+array = [1, 2, 3, 4, 5]
+
+array.delete_if do |num|
+  num > 1
+end
+p array
+
+array.keep_if do |num|
+  num < 5
+end
+p array
+
+array1 = array.take_while do |num|
+  num > 3
+end
+p array1
+
+array2 = array.drop_while do |num|
+  num < 5
+end
+p array2
+
+# hashes
+
+hash = { one: 1, two: 2, three: 3, four: 4, five: 5}
+
+
+hash.delete_if do |word, num|
+  num < 4
+end
+p hash
+
+hash.keep_if do |word, num|
+  num < 5
+end
+p hash
+
+hash.select! do |word, num|
+  num < 3
+end
+p hash
+
+hash.reject! do |word, num|
+  num < 3
+end
+p hash
