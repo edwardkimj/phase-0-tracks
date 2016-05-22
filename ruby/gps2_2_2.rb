@@ -11,7 +11,6 @@ def new_grocery_list(items)
   list_ary.each do |item|
     grocery_list[item] = 1
   end
-  print_list(grocery_list)
   grocery_list
 end
 
@@ -22,7 +21,6 @@ end
 # output: print updated grocery list
 def add_item(item, list, quantity = 1)
   list[item] = quantity
-  print_list(list)
   list
 end
 
@@ -33,7 +31,6 @@ end
 # output: print updated grocery list
 def delete_item(item, list)
   list.delete(item)
-  print_list(list)
   list
 end
 
@@ -43,7 +40,6 @@ end
 # output: print updated grocery list
 def change_quantity(item, list, quantity)
   list[item] = quantity
-  print_list(list)
   list
 end
 
@@ -54,13 +50,16 @@ end
 
 def print_list(list)
   list.each do |item, quantity|
-    puts "Purchase #{quantity} of #{item}."
+    puts "Purchase #{quantity} #{item}."
   end
 end
 
 #Driver code
-grocery_list = new_grocery_list("carrots apples cereal pizza")
-add_item('kiwi', grocery_list, 4)
-add_item('watermelon', grocery_list)
-delete_item('carrots', grocery_list)
-change_quantity('apples', grocery_list, 5)
+p grocery_list = new_grocery_list("")
+p add_item('lemonade', grocery_list, 2)
+p add_item('tomatoes', grocery_list, 3)
+p add_item('onions', grocery_list, 1)
+p add_item('ice cream', grocery_list, 4)
+p delete_item('lemonade', grocery_list)
+p change_quantity('ice cream', grocery_list, 1)
+print_list(grocery_list)
