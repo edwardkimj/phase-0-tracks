@@ -7,3 +7,15 @@
 // 4. While using the for loop we created, push the results into your empty var
 // reverse_string.
 // 5. console.log reverse_string and end the function
+
+
+function reverse(string) {
+  var reverse_string = "";
+  for (var i = string.length - 1; i >= 0; i--) {
+    reverse_string += string[i];
+  };
+  console.log(reverse_string);
+};
+
+reverse("edward");
+reverse("hello");
