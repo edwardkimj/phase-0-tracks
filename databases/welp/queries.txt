@@ -1,0 +1,21 @@
+sqlite> SELECT * FROM reviews, users, businesses WHERE reviews.user_id = users.id;
+1|3|Good|1|3|3|Brian|Lee|1|Google
+1|3|Good|1|3|3|Brian|Lee|2|Facebook
+1|3|Good|1|3|3|Brian|Lee|3|Uber
+2|5|Great|2|2|2|Tyler|Johnson|1|Google
+2|5|Great|2|2|2|Tyler|Johnson|2|Facebook
+2|5|Great|2|2|2|Tyler|Johnson|3|Uber
+3|1|Bad|3|1|1|Jonathan|Smith|1|Google
+3|1|Bad|3|1|1|Jonathan|Smith|2|Facebook
+3|1|Bad|3|1|1|Jonathan|Smith|3|Uber
+
+sqlite> SELECT users.first_name, users.last_name, businesses.name, reviews.stars, reviews.comment FROM users, businesses JOIN reviews ON user_id = businesses.id;
+Jonathan|Smith|Google|1|Bad
+Jonathan|Smith|Facebook|5|Great
+Jonathan|Smith|Uber|3|Good
+Tyler|Johnson|Google|1|Bad
+Tyler|Johnson|Facebook|5|Great
+Tyler|Johnson|Uber|3|Good
+Brian|Lee|Google|1|Bad
+Brian|Lee|Facebook|5|Great
+Brian|Lee|Uber|3|Good
