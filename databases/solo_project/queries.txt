@@ -1,0 +1,45 @@
+sqlite> SELECT * FROM employees;
+1|Daniel Kim|101|1
+2|Brandon Smith|102|2
+3|Zach Johnson|103|3
+4|Joseph Edwards|104|4
+5|Lance Park|105|5
+
+sqlite> SELECT * FROM departments;
+1|Marketing
+2|Sales
+3|Engineering
+4|Finance
+5|Design
+
+sqlite> UPDATE employees SET name="Jon Kim" WHERE name="Daniel Kim";
+sqlite> SELECT * FROM employees;
+1|Jon Kim|101|1
+2|Brandon Smith|102|2
+3|Zach Johnson|103|3
+4|Joseph Edwards|104|4
+5|Lance Park|105|5
+
+sqlite> SELECT * FROM employees, departments WHERE employees.department_id = departments.id;
+1|Jon Kim|101|1|1|Marketing
+2|Brandon Smith|102|2|2|Sales
+3|Zach Johnson|103|3|3|Engineering
+4|Joseph Edwards|104|4|4|Finance
+5|Lance Park|105|5|5|Design
+
+sqlite> SELECT employees.name, departments.name FROM employees JOIN departments ON employees.department_id = departments.id;
+Error: no such column: departments.name
+
+sqlite> SELECT employees.name, departments.department FROM employees JOIN departments ON employees.department_id = departments.id;
+Jon Kim|Marketing
+Brandon Smith|Sales
+Zach Johnson|Engineering
+Joseph Edwards|Finance
+Lance Park|Design
+
+sqlite> DELETE FROM employees WHERE name="Jon Kim";
+sqlite> SELECT employees.name, departments.department FROM employees JOIN departments ON employees.department_id = departments.id;
+Brandon Smith|Sales
+Zach Johnson|Engineering
+Joseph Edwards|Finance
+Lance Park|Design
