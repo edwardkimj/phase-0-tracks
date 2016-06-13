@@ -44,3 +44,32 @@ get '/students/:id' do
   student = db.execute("SELECT * FROM students WHERE id=?", [params[:id]])[0]
   student.to_s
 end
+
+# Add a /contact route that displays an address
+
+get '/contact' do
+  "1234 Example St. <br> San Francisco, CA 94107"
+end
+
+# Add a /great_job route that can take a person's name as a query parameter
+# and say "Good job, [persons name]". If the query parameter is not present,
+# say "Good job!"
+
+get '/great_job/' do
+  name = params[:name]
+  if name
+    "Good job #{name}!"
+  else
+    "Good job!"
+  end
+end
+
+# A route that uses route parameters to add two numbers and respond with that
+# result
+
+get '/add/:num1/num2' do
+  num1 = params[:num1].to_i
+  num2 = params[:num2].to_i
+  sum = num1 + num2
+  "The sum of these numbers is #{sum.to_s}"
+end
